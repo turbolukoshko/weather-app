@@ -1,0 +1,22 @@
+.weather-forecast {
+  margin-top: 20px;
+}
+
+.weather-forecast__title {
+  font-weight: 400;
+}
+
+.weather-forecast__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .weather-forecast__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 100px;
+    padding: 15px;
+    background: rgb(26, 113, 150);
+    box-sizing: border-box;
+  }
+}
