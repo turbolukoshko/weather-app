@@ -21,5 +21,6 @@ ul {
 
 .App {
   background: rgb(84,111,210);
-  padding: 10px;
+  padding: 15px;
+  box-sizing: border-box;
 }

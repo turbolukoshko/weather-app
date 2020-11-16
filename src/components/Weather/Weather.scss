@@ -15,25 +15,24 @@
 .weather__details {
   display: flex;
   justify-content: space-between;
-}
-
-.weather__details-info,
-.weather__additional {
-  width: 50%;
-  padding: 0 20px;
+  margin: 30px 0;
 }
 
 .weather__details-info {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-right: 1px solid #fff;
+  justify-content: space-between;
+  width: 45%;
+  padding-right: 50px;
+  border-right: 1px solid #d3d0d0;
   .weather__details-info-img {
     width: 100px;
     height: 100px;
-    border: 1px solid black;
-    margin-right: 30px;
   }
+}
+
+.weather__additional {
+  width: 45%;
 }
 
 .weather__details-temperature {
@@ -50,12 +49,12 @@
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin-bottom: 20px;
+    margin: 30px 0;
   }
   .weather__additional-item:nth-child(1),
   .weather__additional-item:nth-child(2),
   .weather__additional-item:nth-child(3) {
-    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -66,4 +65,9 @@
 
 .weather__additional-item-indicator {
   font-size: 0.8em;
+}
+
+.weather__details-info-main,
+.weather__details-info-feels-like {
+  text-align: center;
 }
