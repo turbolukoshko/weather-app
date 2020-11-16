@@ -4,6 +4,7 @@ import Weather from "../Weather/Weather";
 import WeatherForecast from "../WeatherForecast/WeatherForecast";
 import { weatherAction } from "../../store/actions/weatherAction.js";
 import Loader from "../UI/Loader/Loader";
+import './Main.scss';
 
 class Main extends Component {
   async componentDidMount() {
@@ -11,7 +12,6 @@ class Main extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <main className="main">
         {this.props.loading ? (
