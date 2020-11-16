@@ -8,9 +8,9 @@ export const weatherAction = () => {
       const data = [];
       dispatch(loadingStart());
 
-      const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=Kharkiv&appid=${API_KEY}`);
-      console.log(response)
-      data.push(response);
+      const currentWeather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Kharkiv&units=metric&appid=${API_KEY}`)
+      const forecastWeather = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=Kharkiv&units=metric&appid=${API_KEY}`);
+      data.push(currentWeather);
 
       dispatch(getData(data));
 
