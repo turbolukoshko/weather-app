@@ -9,13 +9,16 @@
 .weather-forecast__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: center;
   margin-top: 15px;
   .weather-forecast__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 0 1 100px;
+    margin-bottom: 15px;
+    margin-right: 15px;
     padding: 15px;
     background: rgba(0, 0, 0, 0.25);
     border: 1px solid transparent;

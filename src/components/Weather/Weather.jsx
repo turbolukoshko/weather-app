@@ -3,7 +3,6 @@ import { getDate, getDay, getMonth } from "../../helper/getDate";
 import "./Weather.scss";
 
 const Weather = props => {
-  console.log(props.weather);
   const {weather} = props;
   return (
     <div className="weather">
