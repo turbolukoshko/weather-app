@@ -1,3 +1,4 @@
 export const START_LOADING = 'START_LOADING';
-export const GET_DATA = 'GET_DATA';
+export const GET_CURRENT_WEATHER = 'GET_CURRENT_WEATHER';
+export const GET_FORECAST = 'GET_FORECAST';
 export const ERRORS = 'ERRORS';
