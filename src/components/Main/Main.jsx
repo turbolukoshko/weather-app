@@ -18,8 +18,8 @@ class Main extends Component {
           <Loader />
         ) : (
           <Fragment>
-            <Weather weather={this.props.data} />
-            <WeatherForecast />
+            <Weather weather={this.props.currentWeather} />
+            <WeatherForecast forecast={this.props.forecast}/>
           </Fragment>
         )}
       </main>
@@ -30,7 +30,8 @@ class Main extends Component {
 const mapStateToProps = (state) => {
   return {
     loading: state.weatherReducer.loading,
-    data: state.weatherReducer.data,
+    currentWeather: state.weatherReducer.currentWeather,
+    forecast: state.weatherReducer.forecast,
     errors: state.weatherReducer.errors,
   };
 };
