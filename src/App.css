@@ -1,7 +1,5 @@
 html,
-body,
-#root,
-#root > div {
+body {
   height: 100%;
   color: #fff;
 }
@@ -21,6 +19,7 @@ ul {
 
 .App {
   background: rgb(84,111,210);
-  padding: 15px;
+  padding: 0 15px;
   box-sizing: border-box;
+  min-height: 100vh;
 }
