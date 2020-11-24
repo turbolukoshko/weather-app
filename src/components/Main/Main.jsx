@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import Weather from "../Weather/Weather";
 import WeatherForecast from "../WeatherForecast/WeatherForecast";
-import { weatherAction } from "../../store/actions/weatherAction.js";
+import { weatherAction } from "../../store/actions/weatherActions.js";
 import Loader from "../UI/Loader/Loader";
 import './Main.scss';
 

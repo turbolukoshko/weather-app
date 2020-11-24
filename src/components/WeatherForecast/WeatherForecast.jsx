@@ -4,10 +4,11 @@ import './WeatherForecast.scss';
 const WeatherForecast = props => {
   const {forecast} = props;
   return (
+    forecast.length !== 0 &&
     <div className="weather-forecast">
       <h2 className="weather-forecast__title">Todays weather</h2>
       <ul className="weather-forecast__list">
-        {forecast.length && forecast[0].data.list.slice(0, 7).map((forecastInfo, index) => {
+        {forecast && forecast[0] && forecast[0].data.list.slice(0, 7).map((forecastInfo, index) => {
           return(
             <li
               className="weather-forecast__item"
