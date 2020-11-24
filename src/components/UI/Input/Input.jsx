@@ -1,11 +1,12 @@
 import React from 'react';
+import './Input.scss';
 
 const Input = props => {
   return(
     <input 
       type="text" 
       className="input" 
-      onChange={props.onChange}
+      onChange={e => props.onChange(e)}
     />
   );
 }
