@@ -11,21 +11,10 @@
 }
 
 .weather-not-found__title,
-.weather-not-found__description,
-.weather-not-found__img {
+.weather-not-found__description {
   margin-bottom: 30px;
 } 
 
-
-
-.weather-not-found__img {
-  width: 50%;
-}
-
 .weather-not-found__link {
   color: #ffffff;
-}
-
-.weather-not-found__link:first-child {
-  margin-right: 10px;
 }
