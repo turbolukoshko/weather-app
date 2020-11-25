@@ -1,0 +1,31 @@
+.weather-not-found {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+}
+
+.weather-not-found__description {
+  font-size: 16px;
+}
+
+.weather-not-found__title,
+.weather-not-found__description,
+.weather-not-found__img {
+  margin-bottom: 30px;
+} 
+
+
+
+.weather-not-found__img {
+  width: 50%;
+}
+
+.weather-not-found__link {
+  color: #ffffff;
+}
+
+.weather-not-found__link:first-child {
+  margin-right: 10px;
+}
