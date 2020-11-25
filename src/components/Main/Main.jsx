@@ -5,11 +5,13 @@ import WeatherForecast from "../WeatherForecast/WeatherForecast";
 import { weatherAction } from "../../store/actions/weatherActions.js";
 import Loader from "../UI/Loader/Loader";
 import './Main.scss';
+import PageNotFound from "../PageNotFound/PageNotFound";
 
 class Main extends Component {
 
   state = {
     city: '',
+    cityError: '',
     geolocation: {
       latitude: null,
       longitude: null,
@@ -40,7 +42,6 @@ class Main extends Component {
     };
     
     navigator.geolocation.getCurrentPosition(success, error, options);
-    // this.props.getWeather(this.state.geolocation);
   }
   
   componentDidUpdate(prevProps, prevState) {
@@ -55,7 +56,25 @@ class Main extends Component {
 
   findWeather = event => {
     event.preventDefault();
-    this.props.getWeather(this.state.geolocation, this.state.city);
+    this.validate() && this.props.getWeather(this.state.geolocation, this.state.city);
+  }
+
+  validate = () => {
+    const {city} = this.state;
+    const RegExp = /^[A-Za-z]+$/;
+
+    if(city === '') {
+      this.setState({cityError: 'Field cannot be empty'})
+      return false;
+    }
+
+    if(!city.match(RegExp)) {
+      this.setState({cityError: 'Field cannot contain any number'});
+      return false;
+    }
+
+    this.setState({cityError: ''});
+    return true;
   }
 
   render() {
@@ -64,10 +83,17 @@ class Main extends Component {
         {this.props.loading && !this.props.errors && <Loader />}
         {!this.props.loading && !this.props.errors &&
           <Fragment>
-            <Weather weather={this.props.currentWeather} onChangeInput={this.onChangeInput} findWeather={(e) => this.findWeather(e)}/>
+            <Weather 
+              weather={this.props.currentWeather} 
+              onChangeInput={this.onChangeInput} 
+              findWeather={event => this.findWeather(event)}
+              cityError={this.state.cityError}
+            />
             <WeatherForecast forecast={this.props.forecast}/>
           </Fragment>
         }
+
+        {this.props.errors && <PageNotFound error={this.props.errors}/>}
       </main>
     );
   }

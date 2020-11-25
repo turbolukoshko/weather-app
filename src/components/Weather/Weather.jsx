@@ -15,7 +15,11 @@ const Weather = props => {
           </h2>
           <p className="date">{getDay} {getDate} {getMonth}</p>
         </div>
-          <SearchPanel onChange={props.onChangeInput} findWeather={props.findWeather}/>
+          <SearchPanel 
+            onChange={props.onChangeInput} 
+            findWeather={props.findWeather}
+            cityError={props.cityError}
+          />
       </div>
       <div className="weather__details">
         <div className="weather__details-info">

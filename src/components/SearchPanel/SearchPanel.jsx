@@ -6,9 +6,12 @@ import './SearchPanel.scss';
 const SearchPanel = props => {
 
   return(
-    <div className="search-panel">
-      <Input onChange={props.onChange}/>
-      <Button title="Find" onClick={props.findWeather}/>
+    <div className="search">
+      <div className="search-panel">
+        <Input onChange={props.onChange}/>
+        <Button title="Find" onClick={props.findWeather}/>
+      </div>
+      <div className="error-message">{props.cityError}</div>
     </div>
   );
 }
