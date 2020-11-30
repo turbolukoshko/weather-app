@@ -7,10 +7,10 @@ const SearchPanel = props => {
 
   return(
     <div className="search">
-      <div className="search-panel">
+      <form className="search-panel">
         <Input onChange={props.onChange}/>
         <Button title="Find" onClick={props.findWeather}/>
-      </div>
+      </form>
       <div className="error-message">{props.cityError}</div>
     </div>
   );
