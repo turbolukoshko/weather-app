@@ -16,7 +16,6 @@ export const weatherAction = (geolocation, city) => {
       dispatch(loadingStart());
 
       if(city) {
-        console.log(city)
         const currentWeather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`);
         const forecastWeather = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`);
         dataCurrentDay.push(currentWeather);
