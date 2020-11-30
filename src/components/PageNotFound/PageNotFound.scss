@@ -1,8 +1,9 @@
 .weather-not-found {
   position: absolute;
-  top: 30%;
+  top: 45%;
   left: 50%;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -45%);
+  width: 100%;
   text-align: center;
 }
 
@@ -11,10 +12,44 @@
 }
 
 .weather-not-found__title,
-.weather-not-found__description {
+.weather-not-found__description,
+.weather-code {
   margin-bottom: 30px;
+  padding: 0 10px;
 } 
 
 .weather-not-found__link {
-  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 150px;
+  height: 50px;
+  color: #3f539d;
+  background: #ffffff;
+  border-radius: 30px;
+  text-decoration: none;
+  &:hover {
+    color: #23336d;
+  }
+}
+
+.weather-code {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+@media(max-width: 425px) {
+  .weather-code {
+    font-size: 100px;
+  }
+  .weather-not-found__title {
+    font-size: 1.5em;
+  }
+  .weather-not-found__title,
+  .weather-not-found__description,
+  .weather-code {
+    margin-bottom: 25px;
+  } 
 }
