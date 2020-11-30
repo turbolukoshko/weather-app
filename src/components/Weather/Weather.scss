@@ -24,19 +24,30 @@
 
 .weather__details-info {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 45%;
-  padding-right: 50px;
-  border-right: 1px solid #d3d0d0;
   .weather__details-info-img {
+    width: 100px;
+    height: 100px;
+  }
+  > div {
     width: 100px;
     height: 100px;
   }
 }
 
 .weather__additional {
+  display: flex;
   width: 45%;
+  
+}
+
+.horizontal-line {
+  display: block;
+  width: 1px;
+  background: #ffffff;
 }
 
 .weather__details-temperature {
@@ -49,6 +60,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   .weather__additional-item {
     display: flex;
     flex-direction: column;
@@ -74,4 +86,94 @@
 .weather__details-info-main,
 .weather__details-info-feels-like {
   text-align: center;
+}
+
+@media(max-width: 768px) {
+  .weather__search {
+    .weather__city {
+      width: 100%;
+    }
+  }
+  .search {
+    width: 100%;
+    margin-top: 16px;
+    input {
+      width: 90%;
+      height: 28px;
+    }
+    button {
+      width: 10%;
+      height: 28px;
+    }
+  }
+  .weather__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    .weather__details-info,
+    .weather__additional {
+      width: 80%;
+    }
+    .weather__details-info {
+      margin-bottom: 10px;
+    }
+    .horizontal-line {
+      display: none;
+    }
+  }
+  .weather__additional-item {
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media(max-width: 425px) {
+  .search {
+    width: 100%;
+    margin-top: 16px;
+    input {
+      width: 85%;
+      height: 26px;
+    }
+    button {
+      width: 15%;
+      height: 26px;
+    }
+  }
+  .weather__city-name {
+    font-size: 1.8em;
+  }
+  .weather__details {
+    .weather__details-info,
+    .weather__additional {
+      width: 100%;
+    } 
+  }
+  .weather__additional-list {
+    .weather__additional-item {
+      .weather__additional-item-info {
+        font-size: 1.25em;
+        margin-bottom: 5px;
+
+      }
+      .weather__additional-item-indicator {
+        font-size: 1em;
+      }
+    }
+  }
+  .weather__details-info {
+    .weather__details-info-img {
+      width: 100px;
+      height: 100px;
+    }
+    > div {
+      width: auto;
+      height: 100px;
+    }
+  }
 }
