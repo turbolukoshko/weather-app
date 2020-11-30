@@ -38,6 +38,7 @@ const Weather = props => {
             <p className="weather__details-description">Feels like</p>
           </div>
         </div>
+        <div className="horizontal-line"></div>
         <div className="weather__additional">
           <ul className="weather__additional-list">
             <li className="weather__additional-item">
